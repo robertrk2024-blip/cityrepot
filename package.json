@@ -1,0 +1,76 @@
+
+{
+  "name": "cityreport",
+  "version": "3.0.0",
+  "description": "Application de signalement citoyen sécurisée avec Next.js 14 et Supabase",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint --fix",
+    "lint:check": "next lint",
+    "type-check": "tsc --noEmit",
+    "test": "npm run type-check && npm run lint:check",
+    "clean": "rm -rf .next out node_modules/.cache",
+    "fresh-install": "npm run clean && npm install",
+    "postinstall": "echo \"✅ Installation terminée avec succès\"",
+    "security-check": "npm audit --audit-level moderate",
+    "build:analyze": "ANALYZE=true npm run build",
+    "deploy:vercel": "npm run build && vercel --prod",
+    "check-dependencies": "npm outdated",
+    "update-dependencies": "npm update",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "next": "14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recharts": "^2.10.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.17.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.3%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "keywords": [
+    "cityreport",
+    "signalement",
+    "citoyen",
+    "nextjs",
+    "supabase",
+    "securise",
+    "typescript",
+    "pwa",
+    "mobile-first"
+  ],
+  "author": "Équipe CityReport",
+  "license": "Private",
+  "repository": {
+    "type": "git",
+    "url": "private"
+  }
+}
