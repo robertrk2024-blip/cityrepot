@@ -45,3 +45,14 @@ const sampleReports: CitizenReport[] = [
     location_accuracy: 12
   }
 ];
+export {
+  CitizenReport,
+  PublicAlert,
+  EmergencyContact,
+  AdminUser,
+  ReportsManager,
+  AlertsManager,
+  ContactsManager,
+  AdminAuthManager,
+  initializeStorage
+};
