@@ -6,15 +6,16 @@ import ReportsList from './ReportsList';
 import ReportDetail from './ReportDetail';
 import AlertsManagement from './AlertsManagement';
 import ContactManagement from './ContactManagement';
+import { CitizenReport } from './types'; // Chemin direct vers types.ts
 
 export default function AdminPage() {
-  const [selectedReport, setSelectedReport] = useState(null);
-  const [currentView, setCurrentView] = useState('reports'); // 'reports' | 'alerts' | 'contacts'
+  const [selectedReport, setSelectedReport] = useState<CitizenReport | null>(null);
+  const [currentView, setCurrentView] = useState<'reports' | 'alerts' | 'contacts'>('reports');
 
   return (
     <div className="min-h-screen bg-gray-50">
       <AdminHeader />
-      
+
       {/* Navigation entre les sections */}
       <div className="pt-16 bg-white border-b">
         <div className="flex">
@@ -66,8 +67,8 @@ export default function AdminPage() {
       <main className="p-4">
         {currentView === 'reports' ? (
           selectedReport ? (
-            <ReportDetail 
-              report={selectedReport} 
+            <ReportDetail
+              report={selectedReport as CitizenReport} // Cast pour éviter les erreurs TS
               onBack={() => setSelectedReport(null)}
             />
           ) : (
