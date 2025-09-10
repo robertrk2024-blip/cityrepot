@@ -8,4 +8,6 @@ export interface CitizenReport {
   status: string;
   created_at: string;
   updated_at?: string;
+  photos_count: number; // ✅ ajouté pour correspondre à lib/storage.ts
 }
+
